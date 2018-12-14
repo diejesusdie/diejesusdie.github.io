@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page_hotel booking">
+<section id="header_menu">
+	<div class="container">
+		<a href="">Номера и цены</a>
+		<a href="">Наши преимущества</a>
+		<a href="">Фото отеля</a>
+		<a href="">О нас</a>
+		<a href="">Контакты</a>
+	</div>
+</section>
+
+
+<section id="header_content_informer">
+	<div class="container">
+		<div class="logo_page_hotel"><img src="images/logo_hotel2.png" alt=""></div>
+		<div class="href_map">
+			<a href="">
+			<p class="address">г.Нижний Новгород ул. Володарского, 38а</p>
+			<p class="route">схема проезда</p>
+			</a>
+		</div>
+		<div class="choice_btn">
+		<a href="mail:piligrimhotelnn@gmail.com" class="mail">piligrimhotelnn@gmail.com</a>
+		<a href="tel:+78314232346" class="tel">+7 (831) 423-23-46</a>
+		<a href="#popup_feedback" class="btn_feedback fancybox">Заказать звонок</a>
+		</div>
+	</div>
+</section>
+
+
+<main>
+	<div class="container">
+		<div class="bookig_page">
+			<h1>БРОНИРОВАНИЕ НОМЕРА</h1>
+			<form action="" id="booking_page_form">
+				<h2>1. Выберите даты и количество человек</h2>
+				<div class="wp_input">
+				<label class="input_date"><p>Дата  заезда</p><input type="date"></label>
+				<label class="input_date"><p>Дата выезда</p><input type="date"></label>
+				</div>
+				<div class="wp_input">
+					<label class="num_people_text"><span class="num_people">ВЫБЕРИТЕ  КОЛИЧЕСТВО ЧЕЛОВЕК</span></label>
+					<label class="input_num"><input type="number" id="count" onchange="calc()" value="1"></label>
+					       
+       
+
+				</div>
+				<h2>2. Контактные данные</h2>
+				<div class="wp_input">
+				<label class="input_text"><input type="text" placeholder="Ваше имя"></label>
+				<label class="input_text"><input type="text" placeholder="Ваш номер телефона*"></label>
+				<div class="checkbox"><div class="checkbox_btn"><input type="checkbox" id="box1"><label for="box1"></label></div><span>даю согласие на обработку моих персональных данных</span></div>
+				</div>
+				<h2>3. Проверьте правильность выбора номера</h2>
+				<div class="wp_input">
+					<h3>Небольшой Двухместный Номер с Одной Кроватью</h3>
+					<div class="img_room">
+						<img src="images/hotel_img_pl/2.png" alt="">
+						<img src="images/hotel_img_pl/1.png" alt="">
+						<img src="images/hotel_img_pl/4.png" alt="">
+					</div>
+					<div class="option_room">
+					<div class="button_checkbox_option_room">
+						<div>
+							<input type="radio" onchange="calc()" value="1700" id="room1" name="box_radio">							
+							<div class="checkbox_uzu" for="box2_1">
+							<img src="images/person.png" alt="">
+							<span class="redio_elven">
+								Одноместное <br>
+								размещение: <br>
+								1 800 руб.
+							</span>
+							</div>
+						</div>
+						<div>
+							<input type="radio" onchange="calc()" value="1800" id="room2" name="box_radio">
+							<div class="checkbox_uzu" for="box2_1">
+							<img src="images/person2.png" alt="">
+							<span class="redio_elven">
+								Двухместное <br>
+								размещение: <br>
+								1 900 руб.
+							</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="room_text_option">
+						<p class="title">В номере:</p>
+						<p>
+							Двуспальняя кровать с ортопедическим
+матрасом, санузел и душевая кабина, 
+холодильник, кондиционер, фен, плазменный телевизор.
+						</p>
+						<p class="title">В стоимость проживания входит:</p>
+						<p>Постельные и душевые принадлежности,
+ежедневная уборка, Wi-Fi.</p>
+					</div>
+					</div>
+
+					<div class="price_num">
+						<p>К оплате: <span id="result">0</span> рублей</p>
+						(с учетом скидки) <br>
+						<a href="#" class="btn_booking_page_btn">Бронировать</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</main>
+
+
+<section id="footer_menu">
+	<div class="container">
+		<div class="footer_copy">
+			<p>Отель "Пилигрим-НН"</p>
+			<a href="">Нижний Новгород, ул.Володарского, 38а </a>
+		</div>
+		<div class="footer_menu_page">
+		<a href="">Сведения об отеле</a>
+		<a href="">Правила проживания</a>
+		<a href="">Свидетельство</a>
+		<a href="">Политика в отношении персональных данных</a>
+		</div>
+	</div>
+</section>
+<div id="popup_feedback" style="display:none">	
+<form class="feedback_popup" name="MyForm" action="" id="callbacks" method="post">
+	<h2>Оставить заявку</h2>
+	<p>и наши менеджеры свяжутся с Вами 
+в ближайшее время</p>
+<div id="erconts"></div>
+<input type="text" name="type_form" value="Заказать звонок из страницы бронирования" style="display: none">
+	<input name="name" type="text" placeholder="Ваше имя" for="box1" required><label for="box1" class="validation"></label>
+	<input name="tel" type="phone" placeholder="Ваш номер телефона" for="box2" required><label for="box2" class="validation"></label>
+	<button id="btncontcall">Оставить заявку</button>
+</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
