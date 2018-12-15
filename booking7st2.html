@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>БРОНИРОВАНИЕ НОМЕРА</title>
+	<link rel="stylesheet" href="css/stylesbooking.css">
+</head>
+<body class="page_hotel booking">
+<section id="header_menu">
+	<div class="container">
+		<a href="/page-hotel.html#main">Номера и цены</a>
+		<a href="/page-hotel.html#advantages">Наши преимущества</a>
+		<a href="/page-hotel.html#carousel">Фото отеля</a>
+		<a href="/page-hotel.html#about_hotel">О нас</a>
+		<a href="/page-hotel.html#footer">Контакты</a>
+	</div>
+</section>
+
+
+<section id="header_content_informer">
+	<div class="container">
+		<div class="logo_page_hotel"><img src="images/logo_hotel1.png" alt=""></div>
+		<div class="href_map">
+			<a href="#map_modal" class="fancybox">
+			<p class="address">г.Нижний Новгород, <br> ул.Добролюбова, 7</p>
+			<p class="route">схема проезда</p>
+			</a>
+		</div>
+		<div class="choice_btn">
+		<a href="mail:piligrimhotelnn@gmail.com" class="mail">sevenhotelnn@gmail.com</a>
+		<a href="tel:+79535535257" class="tel">+7 (953) 553-52-57</a>
+		<a href="#popup_feedback" class="btn_feedback fancybox">Заказать звонок</a>
+		</div>
+	</div>
+</section>
+
+
+<main>
+	<div class="container">
+		<div class="bookig_page">
+			<h1>БРОНИРОВАНИЕ НОМЕРА</h1>
+			<form action="" id="booking_hotel7_form" class="booking_page_form">
+				<h2>1. Выберите даты</h2>
+				<div class="wp_input">
+				<label class="input_date"><p>Дата  заезда</p><input type="date" name="booking_date_arrival"></label>
+				<label class="input_date"><p>Дата выезда</p><input type="date" name="booking_date_departureki"></label>
+				</div>
+				<h2>2. Контактные данные</h2>
+				<div class="wp_input">
+				<label class="input_text"><input type="text" placeholder="Ваше имя" name="name"></label>
+				<label class="input_text"><input type="text" placeholder="Ваш номер телефона*" name="tel"></label>
+				</div>
+				<h2>3. Проверьте правильность выбора номера</h2>
+				<div class="wp_input">
+					<h3>Двухместный Стандарт с Двумя Кроватями</h3>
+					<div class="img_room">
+						<img src="images/hotel_img_7/EmptyName_124.png" alt="">
+						<img src="images/hotel_img_7/EmptyName_49.png" alt="">
+						<img src="images/hotel_img_7/EmptyName_21.png" alt="">
+					</div>
+					<div class="option_room">
+					<div class="button_checkbox_option_room">
+						<div>
+							<input type="radio" onchange="calc()" value="2000 Одноместное" id="room1" name="room_booking" checked="checked">							
+							<div class="checkbox_uzu" for="box2_1">
+							<img src="images/person.png" alt="">
+							<span class="redio_elven">
+								Одноместное <br>
+								размещение: <br>
+								2 000 руб.
+							</span>
+							</div>
+						</div>
+						<div>
+							<input type="radio" onchange="calc()" value="2100 Двухместное" id="room2" name="room_booking">
+							<div class="checkbox_uzu" for="box2_1">
+							<img src="images/person2.png" alt="">
+							<span class="redio_elven">
+								Двухместное <br>
+								размещение: <br>
+								2 100 руб.
+							</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="room_text_option">
+						<p class="title" style="color: #fff;font-weight: bold;background-color: #6a6079;padding: 5px 0;" >В НОМЕРЕ:</p>
+						<p style="border: 1px solid #6a6079;">Две Односпальные кровати с ортопедическим
+						матрасом, санузел и душевая кабина, 
+						холодильник, фен, плазменный телевизор, шкаф, письменный стол.
+						</p>
+						<p class="title" style="color: #fff;font-weight: bold;background-color: #6a6079;padding: 5px 0;">В СТОИМОСТЬ ПРОЖИВАНИЯ ВХОДИТ:</p>
+						<p style="border: 1px solid #6a6079;">Постельные и душевые принадлежности,
+						ежедневная уборка, Wi-Fi, питьевая вода из кулера, пользование общей микроволновой печью и мультиваркой.</p>
+					</div>
+					</div>
+
+					<div class="price_num">
+						<button class="btn_booking_page_btn" id="booking_hote7_btn">Бронировать</button>
+						<div id="erconts"></div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</main>
+
+
+<section id="footer_menu">
+	<div class="container">
+		<div class="footer_copy">
+			<p style="color: white;">Отель "Hotel #7"</p>
+			<a href="" style="color: white;">Нижний Новгород, ул.Добролюбова, 7</a>
+		</div>
+	</div>
+</section>
+<div id="map_modal" style="display:none">
+	<iframe src="https://yandex.ru/map-widget/v1/-/CBF9nNhtCD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+</div>
+
+<div id="popup_feedback" style="display:none">	
+<form class="feedback_popup" name="MyForm" action="" id="callbacks2" method="post">
+	<h2>Оставить заявку</h2>
+	<p>и наши менеджеры свяжутся с Вами 
+в ближайшее время</p>
+<div id="erconts"></div>
+<input type="text" name="type_form" value="Заказать звонок из страницы Отель#7" style="display: none">
+	<input name="name" type="text" placeholder="Ваше имя" for="box1" required><label for="box1" class="validation"></label>
+	<input name="tel" type="phone" placeholder="Ваш номер телефона" for="box2" required><label for="box2" class="validation"></label>
+	<button id="btncontcall2">Оставить заявку</button>
+</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
